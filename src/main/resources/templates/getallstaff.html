@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+    <link rel="stylesheet" th:href="${getallstaff.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Add Staff Member</h1>
+    <form action="/addstaff" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="staffName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="staffEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="staffDepartment" required>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="staffSalary" required>
+        </div>
+        <button type="submit">Add Staff</button>
+    </form>
+</div>
+</body>
+</html>
