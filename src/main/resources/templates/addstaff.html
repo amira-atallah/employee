@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+    <link rel="stylesheet" th:href="@{/addstaff.css}">
 </head>
 <body>
+<div class="container">
+    <h1>Add Staff Member</h1>
+    <form  method="post" th:object="${staff}" th:action="@{/submit}">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{staffName}"  required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" th:field="*{staffEmail}" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" th:field="*{staffPhone}" required>
+        </div>
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <input type="text" id="department" th:field="*{staffDepartment}" required>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" th:field="*{staffSalary}" required>
+        </div>
+        <button type="submit">Add Staff</button>
+    </form>
+
+</div>
+<button id="back-to-form" onclick="window.location.href='/getallstaff'">View All Staff</button>
 
 </body>
 </html>
